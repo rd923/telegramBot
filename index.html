@@ -10,10 +10,18 @@
     <div id="information"></div>
     <script>
         const tg = window.Telegram.WebApp;
-        const user = tg.initDataUnsafe;
+        const user = tg.initDataUnsafe.user;
 
         if (user)
-            document.getElementById('information').innerHTML = user;
+        {
+            document.getElementById('information').innerHTML = 
+                `
+                    <div> welcome ${ user.first_name } ${ user.last_name } </div>
+                    <div> Your Telegram Information : </div>
+                    <div> Telegram ID : ${ user.id } </div>
+                    <div> Telegram User Name : ${ user.username } </div>
+                `;
+        }
     </script>
 </body>
 </html>
