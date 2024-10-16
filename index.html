@@ -10,7 +10,7 @@
     <div id="information"></div>
     <script>
         const tg = window.Telegram.WebApp;
-        const user = tg.initDataUnsafe.user;
+        const user = tg.initDataUnsafe;
 
         if (user)
             document.getElementById('information').innerHTML = user.first_name;
